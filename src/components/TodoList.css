@@ -1,0 +1,19 @@
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.todo-list-empty {
+  background: var(--color-white);
+  padding: var(--spacing-2xl);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  box-shadow: 0 2px 8px var(--color-shadow);
+  animation: fadeIn var(--transition-base);
+}
+
+.todo-list-empty p {
+  font-size: var(--font-lg);
+  color: var(--color-text-light);
+}

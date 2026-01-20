@@ -1,0 +1,171 @@
+.folder-manager {
+  max-width: 700px;
+}
+
+.folder-manager-content {
+  padding: var(--spacing-xl);
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+/* Add Folder Form */
+.add-folder-form {
+  margin-bottom: var(--spacing-xl);
+}
+
+.add-folder-form h3 {
+  font-size: var(--font-lg);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text);
+}
+
+.divider {
+  height: 1px;
+  background: var(--color-border);
+  margin: var(--spacing-xl) 0;
+}
+
+/* Color Picker */
+.color-picker {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.color-option {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: var(--radius-md);
+  border: 3px solid transparent;
+  transition: all var(--transition-base);
+  font-size: var(--font-lg);
+  color: var(--color-text);
+  font-weight: var(--font-bold);
+  cursor: pointer;
+}
+
+.color-option:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px var(--color-shadow-hover);
+}
+
+.color-option.selected {
+  border-color: var(--color-text);
+  transform: scale(1.05);
+}
+
+/* Existing Folders */
+.existing-folders h3 {
+  font-size: var(--font-lg);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text);
+}
+
+.no-folders {
+  text-align: center;
+  padding: var(--spacing-xl);
+  color: var(--color-text-light);
+}
+
+.folders-grid {
+  display: grid;
+  gap: var(--spacing-sm);
+}
+
+.folder-card {
+  background: var(--color-background);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all var(--transition-base);
+}
+
+.folder-card:hover {
+  background: var(--color-border);
+  transform: translateX(4px);
+}
+
+.folder-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  flex: 1;
+}
+
+.folder-color-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+.folder-card-name {
+  font-weight: var(--font-medium);
+  color: var(--color-text);
+}
+
+.folder-card-actions {
+  display: flex;
+  gap: var(--spacing-xs);
+}
+
+/* Edit Mode */
+.folder-edit-mode {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.folder-edit-mode input {
+  width: 100%;
+  padding: var(--spacing-sm);
+  border: 2px solid var(--color-mint);
+  border-radius: var(--radius-md);
+}
+
+.color-picker-small {
+  display: flex;
+  gap: var(--spacing-xs);
+  flex-wrap: wrap;
+}
+
+.color-option-small {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  border: 2px solid transparent;
+  transition: all var(--transition-base);
+  font-size: var(--font-sm);
+  color: var(--color-text);
+  font-weight: var(--font-bold);
+  cursor: pointer;
+}
+
+.color-option-small:hover {
+  transform: scale(1.1);
+}
+
+.color-option-small.selected {
+  border-color: var(--color-text);
+}
+
+.folder-edit-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  justify-content: flex-end;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .folder-manager-content {
+    padding: var(--spacing-lg);
+  }
+
+  .color-picker {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
